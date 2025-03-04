@@ -7,8 +7,10 @@ class NotesView extends StatelessWidget {
   static final String id = Constants.notesView;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: NotesViewBody(),
+    return SafeArea(
+      child: Scaffold(
+        body: NotesViewBody(),
+      ),
     );
   }
 }
