@@ -5,16 +5,14 @@ class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          'Notes',
-          style: TextStyle(fontSize: 28),
-        ),
-        CustomSearchIcon()
-      ],
-    );
-  }
+  Widget build(BuildContext context) => const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            'Notes',
+            style: TextStyle(fontSize: 28),
+          ),
+          CustomSearchIcon()
+        ],
+      );
 }

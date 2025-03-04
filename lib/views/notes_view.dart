@@ -6,11 +6,13 @@ class NotesView extends StatelessWidget {
   const NotesView({super.key});
   static final String id = Constants.notesView;
   @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: NotesViewBody(),
-      ),
-    );
-  }
+  Widget build(BuildContext context) => SafeArea(
+        child: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            child: const Icon(Icons.add),
+          ),
+          body: const NotesViewBody(),
+        ),
+      );
 }

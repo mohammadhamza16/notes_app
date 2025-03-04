@@ -1,3 +1,3 @@
 class Constants {
-  static String notesView = 'NotesView';
+  static const String notesView = 'NotesView';
 }
