@@ -8,7 +8,7 @@ class NoteItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 12),
-      padding: EdgeInsets.symmetric(vertical: 24, horizontal: 24),
+      padding: EdgeInsets.only(right: 8, top: 24, bottom: 24, left: 24),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
           12,
@@ -25,23 +25,29 @@ class NoteItem extends StatelessWidget {
               style: TextStyle(fontSize: 24, color: Colors.black),
             ),
             subtitle: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              padding: const EdgeInsets.symmetric(vertical: 12.0),
               child: Text(
                 'Hi i want to learn flutter right now',
                 style: TextStyle(
                     fontSize: 18, color: Colors.black.withValues(alpha: .3)),
               ),
             ),
-            trailing: Icon(
-              color: Colors.black,
-              FontAwesomeIcons.trash,
-              size: 24,
+            trailing: IconButton(
+              onPressed: () {},
+              icon: Icon(
+                FontAwesomeIcons.trash,
+                color: Colors.black,
+                size: 22,
+              ),
             ),
           ),
-          Text(
-            'May21, 2024',
-            style: TextStyle(
-                fontSize: 16, color: Colors.black.withValues(alpha: .3)),
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: Text(
+              'May21, 2024',
+              style: TextStyle(
+                  fontSize: 16, color: Colors.black.withValues(alpha: .3)),
+            ),
           )
         ],
       ),
